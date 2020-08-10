@@ -4,4 +4,4 @@ ADD init.sh /home
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 USER node
 WORKDIR /home
-CMD bash /init.sh
+CMD bash ./init.sh
