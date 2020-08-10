@@ -6,4 +6,4 @@ ADD init.sh /init.sh
 
 USER whatever_heroku_will_rename_it
 WORKDIR /home
-CMD bash /init.sh
+CMD mkdir -p ~/.bin && bash /init.sh
