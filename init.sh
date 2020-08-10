@@ -48,11 +48,11 @@ UsePrivilegeSeparation no
 eof
 $(which sshd) -f xxx
 
-cat > ./cron.sh <<'eof'
+cat > ./cron.sh <<"eof"
 #!/bin/bash
 while [ true ]
 do
-curl https://wskit.herokuapp.com
+curl https://$HEROKU_APP_NAME.herokuapp.com
 sleep 1200
 done
 eof
