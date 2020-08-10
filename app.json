@@ -1,8 +1,6 @@
   
 {
   "name": "wskit",
-  "description": "none",
-  "keywords": ["none"],
   "env": {},
   "repository": "https://github.com/RlCig/v2hero",
   "stack": "container"
