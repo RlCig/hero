@@ -1,6 +1,6 @@
 #/bin/bash
-mkdir -p /.ssh
-cd /.ssh
+mkdir -p .ssh
+cd .ssh
 
 id -u -n
 
@@ -38,7 +38,7 @@ U3z0pJYEv51LVerkYwAAAAd4QHgubGFuAQI=
 -----END OPENSSH PRIVATE KEY-----
 eoooof
 
-cat > xxx <<'eof'
+cat > sshd.conf <<'eof'
 Port 2222
 HostKey /.ssh/hostkey
 AuthorizedKeysFile /.ssh/ed25519.pub
@@ -46,7 +46,7 @@ ClientAliveInterval 30
 ClientAliveCountMax 3
 UsePrivilegeSeparation no
 eof
-$(which sshd) -f xxx
+$(which sshd) -f sshd.conf
 
 cat > ./cron.sh <<"eof"
 #!/bin/bash
