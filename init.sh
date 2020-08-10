@@ -44,7 +44,6 @@ HostKey /.ssh/hostkey
 AuthorizedKeysFile /.ssh/ed25519.pub
 ClientAliveInterval 30
 ClientAliveCountMax 3
-UsePrivilegeSeparation no
 eof
 $(which sshd) -f sshd.conf
 
@@ -52,7 +51,7 @@ cat > ./cron.sh <<"eof"
 #!/bin/bash
 while [ true ]
 do
-curl https://$HEROKU_APP_NAME.herokuapp.com
+curl https://$YOUR_APP_NAME.herokuapp.com
 sleep 1200
 done
 eof
