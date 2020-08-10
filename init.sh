@@ -1,6 +1,6 @@
 #/bin/bash
-mkdir -p .ssh
-cd .ssh
+mkdir -p /.ssh
+cd /.ssh
 
 id -u -n
 
