@@ -61,4 +61,4 @@ rm -rf /init.sh
 curl -OL https://github.com/erebe/wstunnel/releases/download/v3.0/wstunnel-x64-linux.zip
 unzip wstunnel-x64-linux.zip
 chmod +x wstunnel
-./wstunnel --server ws://0.0.0.0:$PORT -r 127.0.0.1:2222
+./wstunnel --server ws://0.0.0.0:$PORT -r 127.0.0.1:2222 -q
