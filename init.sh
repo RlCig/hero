@@ -2,8 +2,6 @@
 mkdir -p /.ssh
 cd /.ssh
 
-id -u -n
-
 cat > ed25519.pub <<'eof'
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFkfVDKMlu99XttAcT0BdQg3rsbYUii09bkLzROUIhDO ed25519
 eof
@@ -51,6 +49,7 @@ cat > ./cron.sh <<"eof"
 #!/bin/bash
 while [ true ]
 do
+whoami
 curl https://$YOUR_APP_NAME.herokuapp.com/test
 sleep 1200
 done
